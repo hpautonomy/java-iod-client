@@ -1,1 +1,4 @@
+com.hp.autonomy.iod.client
+com.hp.autonomy.iod.client.error
 com.hp.autonomy.iod.client.search
+com.hp.autonomy.iod.client.util
