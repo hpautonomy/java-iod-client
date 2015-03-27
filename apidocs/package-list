@@ -1,5 +1,7 @@
+com.hp.autonomy.iod.client.api
 com.hp.autonomy.iod.client.api.formatconversion
 com.hp.autonomy.iod.client.api.search
+com.hp.autonomy.iod.client.api.textanalysis
 com.hp.autonomy.iod.client.api.textindexing
 com.hp.autonomy.iod.client.converter
 com.hp.autonomy.iod.client.error

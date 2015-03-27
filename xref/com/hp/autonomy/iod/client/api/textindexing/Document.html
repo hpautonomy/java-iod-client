@@ -46,7 +46,7 @@
 <a class="jxr_linenumber" name="36" href="#36">36</a>  
 <a class="jxr_linenumber" name="37" href="#37">37</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> Map&lt;String, Object&gt; fields;
 <a class="jxr_linenumber" name="38" href="#38">38</a>  
-<a class="jxr_linenumber" name="39" href="#39">39</a>      <strong class="jxr_keyword">private</strong> <a href="../../../../../../../com/hp/autonomy/iod/client/api/textindexing/Document.html">Document</a>(<strong class="jxr_keyword">final</strong> <a href="../../../../../../../com/hp/autonomy/iod/client/api/textindexing/AddToTextIndexReference.html">Builder</a> builder) {
+<a class="jxr_linenumber" name="39" href="#39">39</a>      <strong class="jxr_keyword">private</strong> <a href="../../../../../../../com/hp/autonomy/iod/client/api/textindexing/Document.html">Document</a>(<strong class="jxr_keyword">final</strong> <a href="../../../../../../../com/hp/autonomy/iod/client/api/textindexing/Document.html">Builder</a> builder) {
 <a class="jxr_linenumber" name="40" href="#40">40</a>          <strong class="jxr_keyword">this</strong>.reference = builder.reference;
 <a class="jxr_linenumber" name="41" href="#41">41</a>          <strong class="jxr_keyword">this</strong>.content = builder.content;
 <a class="jxr_linenumber" name="42" href="#42">42</a>          <strong class="jxr_keyword">this</strong>.title = builder.title;
@@ -63,7 +63,7 @@
 <a class="jxr_linenumber" name="53" href="#53">53</a>  
 <a class="jxr_linenumber" name="54" href="#54">54</a>      @Setter
 <a class="jxr_linenumber" name="55" href="#55">55</a>      @Accessors(chain = <strong class="jxr_keyword">true</strong>)
-<a class="jxr_linenumber" name="56" href="#56">56</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../../../com/hp/autonomy/iod/client/api/textindexing/AddToTextIndexReference.html">Builder</a> {
+<a class="jxr_linenumber" name="56" href="#56">56</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../../../com/hp/autonomy/iod/client/api/textindexing/Document.html">Builder</a> {
 <a class="jxr_linenumber" name="57" href="#57">57</a>  
 <a class="jxr_linenumber" name="58" href="#58">58</a>          <strong class="jxr_keyword">private</strong> String reference;
 <a class="jxr_linenumber" name="59" href="#59">59</a>          <strong class="jxr_keyword">private</strong> String content;
@@ -71,7 +71,7 @@
 <a class="jxr_linenumber" name="61" href="#61">61</a>  
 <a class="jxr_linenumber" name="62" href="#62">62</a>          <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> Map&lt;String, Object&gt; fields = <strong class="jxr_keyword">new</strong> HashMap&lt;&gt;();
 <a class="jxr_linenumber" name="63" href="#63">63</a>  
-<a class="jxr_linenumber" name="64" href="#64">64</a>          <strong class="jxr_keyword">public</strong> <a href="../../../../../../../com/hp/autonomy/iod/client/api/textindexing/AddToTextIndexReference.html">Builder</a> addField(<strong class="jxr_keyword">final</strong> String fieldName, <strong class="jxr_keyword">final</strong> Object value) {
+<a class="jxr_linenumber" name="64" href="#64">64</a>          <strong class="jxr_keyword">public</strong> <a href="../../../../../../../com/hp/autonomy/iod/client/api/textindexing/Document.html">Builder</a> addField(<strong class="jxr_keyword">final</strong> String fieldName, <strong class="jxr_keyword">final</strong> Object value) {
 <a class="jxr_linenumber" name="65" href="#65">65</a>              fields.put(fieldName, value);
 <a class="jxr_linenumber" name="66" href="#66">66</a>              <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>;
 <a class="jxr_linenumber" name="67" href="#67">67</a>          }
