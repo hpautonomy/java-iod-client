@@ -36,7 +36,7 @@
 <a class="jxr_linenumber" name="26" href="#26">26</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../../../com/hp/autonomy/iod/client/api/textindexing/ListIndexesServiceITCase.html">ListIndexesServiceITCase</a> <strong class="jxr_keyword">extends</strong> <a href="../../../../../../../com/hp/autonomy/iod/client/AbstractIodClientIntegrationTest.html">AbstractIodClientIntegrationTest</a>{
 <a class="jxr_linenumber" name="27" href="#27">27</a>  
 <a class="jxr_linenumber" name="28" href="#28">28</a>      <strong class="jxr_keyword">private</strong> ListIndexesService listIndexesService;
-<a class="jxr_linenumber" name="29" href="#29">29</a>      <strong class="jxr_keyword">private</strong> <a href="../../../../../../../com/hp/autonomy/iod/client/Endpoint.html">Endpoint</a> endpoint;
+<a class="jxr_linenumber" name="29" href="#29">29</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> <a href="../../../../../../../com/hp/autonomy/iod/client/Endpoint.html">Endpoint</a> endpoint;
 <a class="jxr_linenumber" name="30" href="#30">30</a>  
 <a class="jxr_linenumber" name="31" href="#31">31</a>      @Before
 <a class="jxr_linenumber" name="32" href="#32">32</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setUp() {
@@ -75,7 +75,7 @@
 <a class="jxr_linenumber" name="65" href="#65">65</a>          }
 <a class="jxr_linenumber" name="66" href="#66">66</a>  
 <a class="jxr_linenumber" name="67" href="#67">67</a>          @Override
-<a class="jxr_linenumber" name="68" href="#68">68</a>          <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> matches(Object o) {
+<a class="jxr_linenumber" name="68" href="#68">68</a>          <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> matches(<strong class="jxr_keyword">final</strong> Object o) {
 <a class="jxr_linenumber" name="69" href="#69">69</a>              <strong class="jxr_keyword">if</strong>(!(o instanceof List)) {
 <a class="jxr_linenumber" name="70" href="#70">70</a>                  <strong class="jxr_keyword">return</strong> false;
 <a class="jxr_linenumber" name="71" href="#71">71</a>              }
@@ -92,7 +92,7 @@
 <a class="jxr_linenumber" name="82" href="#82">82</a>          }
 <a class="jxr_linenumber" name="83" href="#83">83</a>  
 <a class="jxr_linenumber" name="84" href="#84">84</a>          @Override
-<a class="jxr_linenumber" name="85" href="#85">85</a>          <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> describeTo(Description description) {
+<a class="jxr_linenumber" name="85" href="#85">85</a>          <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> describeTo(<strong class="jxr_keyword">final</strong> Description description) {
 <a class="jxr_linenumber" name="86" href="#86">86</a>              description.appendText(<span class="jxr_string">"A list containing the index with name "</span> + indexName);
 <a class="jxr_linenumber" name="87" href="#87">87</a>          }
 <a class="jxr_linenumber" name="88" href="#88">88</a>      }

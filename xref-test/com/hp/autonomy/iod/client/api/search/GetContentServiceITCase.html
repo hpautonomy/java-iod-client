@@ -35,7 +35,7 @@
 <a class="jxr_linenumber" name="25" href="#25">25</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../../../com/hp/autonomy/iod/client/api/search/GetContentServiceITCase.html">GetContentServiceITCase</a> <strong class="jxr_keyword">extends</strong> <a href="../../../../../../../com/hp/autonomy/iod/client/AbstractIodClientIntegrationTest.html">AbstractIodClientIntegrationTest</a> {
 <a class="jxr_linenumber" name="26" href="#26">26</a>  
 <a class="jxr_linenumber" name="27" href="#27">27</a>      <strong class="jxr_keyword">private</strong> GetContentService getContentService;
-<a class="jxr_linenumber" name="28" href="#28">28</a>      <strong class="jxr_keyword">private</strong> <a href="../../../../../../../com/hp/autonomy/iod/client/Endpoint.html">Endpoint</a> endpoint;
+<a class="jxr_linenumber" name="28" href="#28">28</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> <a href="../../../../../../../com/hp/autonomy/iod/client/Endpoint.html">Endpoint</a> endpoint;
 <a class="jxr_linenumber" name="29" href="#29">29</a>  
 <a class="jxr_linenumber" name="30" href="#30">30</a>      @Before
 <a class="jxr_linenumber" name="31" href="#31">31</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setUp() {
@@ -51,21 +51,22 @@
 <a class="jxr_linenumber" name="41" href="#41">41</a>      @Test
 <a class="jxr_linenumber" name="42" href="#42">42</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testGetContentWithReference() <strong class="jxr_keyword">throws</strong> IodErrorException {
 <a class="jxr_linenumber" name="43" href="#43">43</a>          <strong class="jxr_keyword">final</strong> Map&lt;String, Object&gt; params = <strong class="jxr_keyword">new</strong> GetContentRequestBuilder()
-<a class="jxr_linenumber" name="44" href="#44">44</a>                  .build();
-<a class="jxr_linenumber" name="45" href="#45">45</a>  
-<a class="jxr_linenumber" name="46" href="#46">46</a>          <strong class="jxr_keyword">final</strong> Documents documents = getContentService.getContent(endpoint.getApiKey(),
-<a class="jxr_linenumber" name="47" href="#47">47</a>                  Arrays.asList(<span class="jxr_string">"3ac70cc2-606e-486a-97d0-511e762b2183"</span>), getIndex(),
-<a class="jxr_linenumber" name="48" href="#48">48</a>                  params);
-<a class="jxr_linenumber" name="49" href="#49">49</a>  
-<a class="jxr_linenumber" name="50" href="#50">50</a>          <strong class="jxr_keyword">final</strong> List&lt;Document&gt; documentList = documents.getDocuments();
-<a class="jxr_linenumber" name="51" href="#51">51</a>  
-<a class="jxr_linenumber" name="52" href="#52">52</a>          assertThat(documentList, hasSize(1));
-<a class="jxr_linenumber" name="53" href="#53">53</a>  
-<a class="jxr_linenumber" name="54" href="#54">54</a>          <strong class="jxr_keyword">final</strong> Document document0 = documentList.get(0);
-<a class="jxr_linenumber" name="55" href="#55">55</a>  
-<a class="jxr_linenumber" name="56" href="#56">56</a>          assertThat(document0.getTitle(), is(<span class="jxr_string">"TEST DOCUMENT"</span>));
-<a class="jxr_linenumber" name="57" href="#57">57</a>      }
-<a class="jxr_linenumber" name="58" href="#58">58</a>  }
+<a class="jxr_linenumber" name="44" href="#44">44</a>                  .setPrint(Print.all)
+<a class="jxr_linenumber" name="45" href="#45">45</a>                  .build();
+<a class="jxr_linenumber" name="46" href="#46">46</a>  
+<a class="jxr_linenumber" name="47" href="#47">47</a>          <strong class="jxr_keyword">final</strong> Documents documents = getContentService.getContent(endpoint.getApiKey(),
+<a class="jxr_linenumber" name="48" href="#48">48</a>                  Arrays.asList(<span class="jxr_string">"3ac70cc2-606e-486a-97d0-511e762b2183"</span>), getIndex(),
+<a class="jxr_linenumber" name="49" href="#49">49</a>                  params);
+<a class="jxr_linenumber" name="50" href="#50">50</a>  
+<a class="jxr_linenumber" name="51" href="#51">51</a>          <strong class="jxr_keyword">final</strong> List&lt;Document&gt; documentList = documents.getDocuments();
+<a class="jxr_linenumber" name="52" href="#52">52</a>  
+<a class="jxr_linenumber" name="53" href="#53">53</a>          assertThat(documentList, hasSize(1));
+<a class="jxr_linenumber" name="54" href="#54">54</a>  
+<a class="jxr_linenumber" name="55" href="#55">55</a>          <strong class="jxr_keyword">final</strong> Document document0 = documentList.get(0);
+<a class="jxr_linenumber" name="56" href="#56">56</a>  
+<a class="jxr_linenumber" name="57" href="#57">57</a>          assertThat(document0.getTitle(), is(<span class="jxr_string">"TEST DOCUMENT"</span>));
+<a class="jxr_linenumber" name="58" href="#58">58</a>      }
+<a class="jxr_linenumber" name="59" href="#59">59</a>  }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>

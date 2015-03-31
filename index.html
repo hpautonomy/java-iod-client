@@ -53,7 +53,7 @@
                   <li id="publishDate">Last Published: 2015-03-31
                       <span class="divider">|</span>
                    </li>
-                  <li id="projectVersion">Version: 0.4.1
+                  <li id="projectVersion">Version: 0.5.0
                       </li>
                       
                 
@@ -230,7 +230,7 @@
 <pre>&lt;dependency&gt;
     &lt;groupId&gt;com.hp.autonomy.iod&lt;/groupId&gt;
     &lt;artifactId&gt;java-iod-client&lt;/artifactId&gt;
-    &lt;version&gt;0.4.0&lt;/version&gt;
+    &lt;version&gt;0.5.0&lt;/version&gt;
 &lt;/dependency&gt;
 </pre></div></div>
 <p>java-iod-client uses <a class="externalLink" href="http://square.github.io/retrofit/">Retrofit</a> as the basis of its HTTP implementation. This requires the use of a RestAdapter to use the services. We have used <a class="externalLink" href="https://github.com/FasterXML/jackson">Jackson</a> for JSON transformation, so you will need to use the Jackson Converter. To send multipart requests to IDOL OnDemand correctly, you will need to wrap this in an IodConverter. An error handler is supplied for parsing error responses from IDOL OnDemand.</p>
@@ -299,6 +299,10 @@ final Documents documents = queryTextIndexService.queryTextIndexWithText(
 <li>AddToTextIndex</li>
   
 <li>DeleteFromTextIndex</li>
+  
+<li>CreateTextIndex</li>
+  
+<li>DeleteTextIndex</li>
 </ul></div>
 <div class="section">
 <h2><a name="Request_Interceptors"></a>Request Interceptors</h2>
@@ -379,7 +383,7 @@ final Map&lt;String, Object&gt; result = idolOnDemandService.get(&quot;querytext
 <p>This approach requires a greater familiarity with the IDOL OnDemand documentation. It also removes the type safety of the dedicated services, making the response useful only for automated transformation into JSON.</p></div>
 <div class="section">
 <h2><a name="Contributing"></a>Contributing</h2>
-<p>We welcome pull requests. These must be licensed under the MIT license. Please submit pull requests to the develop branch - the develop branch is for stable code only.</p></div>
+<p>We welcome pull requests. These must be licensed under the MIT license. Please submit pull requests to the develop branch - the master branch is for stable code only.</p></div>
 <div class="section">
 <h2><a name="Is_it_any_good"></a>Is it any good?</h2>
 <p>Yes.</p></div>
