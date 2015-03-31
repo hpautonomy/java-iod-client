@@ -42,7 +42,7 @@
 <a class="jxr_linenumber" name="32" href="#32">32</a>  
 <a class="jxr_linenumber" name="33" href="#33">33</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> Map&lt;String, Map&lt;String, Integer&gt;&gt; parametricValuesMap;
 <a class="jxr_linenumber" name="34" href="#34">34</a>  
-<a class="jxr_linenumber" name="35" href="#35">35</a>      <strong class="jxr_keyword">private</strong> <a href="../../../../../../../com/hp/autonomy/iod/client/api/search/FieldNames.html">FieldNames</a>(<strong class="jxr_keyword">final</strong> <a href="../../../../../../../com/hp/autonomy/iod/client/api/search/FieldNames.html">Builder</a> builder) {
+<a class="jxr_linenumber" name="35" href="#35">35</a>      <strong class="jxr_keyword">private</strong> <a href="../../../../../../../com/hp/autonomy/iod/client/api/search/FieldNames.html">FieldNames</a>(<strong class="jxr_keyword">final</strong> <a href="../../../../../../../com/hp/autonomy/iod/client/api/search/RetrieveIndexFieldsResponse.html">Builder</a> builder) {
 <a class="jxr_linenumber" name="36" href="#36">36</a>          <strong class="jxr_keyword">this</strong>.parametricValuesMap = builder.parametricValuesMap;
 <a class="jxr_linenumber" name="37" href="#37">37</a>      }
 <a class="jxr_linenumber" name="38" href="#38">38</a>  
@@ -125,11 +125,11 @@
 <a class="jxr_linenumber" name="115" href="#115">115</a>     @Accessors(chain = <strong class="jxr_keyword">true</strong>)
 <a class="jxr_linenumber" name="116" href="#116">116</a>     @JsonPOJOBuilder(withPrefix = <span class="jxr_string">"set"</span>)
 <a class="jxr_linenumber" name="117" href="#117">117</a>     @JsonIgnoreProperties(ignoreUnknown = <strong class="jxr_keyword">true</strong>)
-<a class="jxr_linenumber" name="118" href="#118">118</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../../../com/hp/autonomy/iod/client/api/search/FieldNames.html">Builder</a> {
+<a class="jxr_linenumber" name="118" href="#118">118</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../../../com/hp/autonomy/iod/client/api/search/RetrieveIndexFieldsResponse.html">Builder</a> {
 <a class="jxr_linenumber" name="119" href="#119">119</a>         <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> Map&lt;String, Map&lt;String, Integer&gt;&gt; parametricValuesMap = <strong class="jxr_keyword">new</strong> LinkedHashMap&lt;&gt;();
 <a class="jxr_linenumber" name="120" href="#120">120</a> 
 <a class="jxr_linenumber" name="121" href="#121">121</a>         @JsonAnySetter
-<a class="jxr_linenumber" name="122" href="#122">122</a>         <strong class="jxr_keyword">public</strong> <a href="../../../../../../../com/hp/autonomy/iod/client/api/search/FieldNames.html">Builder</a> addParametricValue(<strong class="jxr_keyword">final</strong> String key, <strong class="jxr_keyword">final</strong> Map&lt;String, Integer&gt; value) {
+<a class="jxr_linenumber" name="122" href="#122">122</a>         <strong class="jxr_keyword">public</strong> <a href="../../../../../../../com/hp/autonomy/iod/client/api/search/RetrieveIndexFieldsResponse.html">Builder</a> addParametricValue(<strong class="jxr_keyword">final</strong> String key, <strong class="jxr_keyword">final</strong> Map&lt;String, Integer&gt; value) {
 <a class="jxr_linenumber" name="123" href="#123">123</a>             parametricValuesMap.put(key, value);
 <a class="jxr_linenumber" name="124" href="#124">124</a>             <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>;
 <a class="jxr_linenumber" name="125" href="#125">125</a>         }
