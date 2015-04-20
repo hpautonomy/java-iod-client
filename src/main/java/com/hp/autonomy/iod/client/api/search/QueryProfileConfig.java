@@ -15,7 +15,7 @@ import lombok.experimental.Accessors;
  * A query profile to send to IDOL onDemand for use with other actions
  */
 @Data
-public class QueryProfile {
+public class QueryProfileConfig {
     /**
      * @return The name of the query manipulation index to use
      */
@@ -28,7 +28,7 @@ public class QueryProfile {
     private final QueryProfilePromotions promotions;
 
 
-    private QueryProfile(final Builder builder) {
+    private QueryProfileConfig(final Builder builder) {
         queryManipulationIndex = builder.queryManipulationIndex;
         promotions = builder.promotions;
     }
@@ -43,8 +43,8 @@ public class QueryProfile {
 
         private QueryProfilePromotions promotions;
 
-        public QueryProfile build() {
-            return new QueryProfile(this);
+        public QueryProfileConfig build() {
+            return new QueryProfileConfig(this);
         }
 
     }
