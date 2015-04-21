@@ -14,14 +14,13 @@ import lombok.Data;
 import lombok.Setter;
 import lombok.experimental.Accessors;
 
-
 /**
- * Holds the response from the CreateQueryProfile API
+ * The response object for the Create, Delete and Update Query Profile APIs.
  */
 @Data
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
-@JsonDeserialize(builder = CreateDeleteQueryProfileResponse.Builder.class)
-public class CreateDeleteQueryProfileResponse {
+@JsonDeserialize(builder = QueryProfileStatusResponse.Builder.class)
+public class QueryProfileStatusResponse {
 
     /**
      * @return The message returned by the api
@@ -43,8 +42,8 @@ public class CreateDeleteQueryProfileResponse {
         @JsonProperty("query_profile")
         private String queryProfile;
 
-        public CreateDeleteQueryProfileResponse build() {
-            return new CreateDeleteQueryProfileResponse(message, queryProfile);
+        public QueryProfileStatusResponse build() {
+            return new QueryProfileStatusResponse(message, queryProfile);
         }
 
     }
