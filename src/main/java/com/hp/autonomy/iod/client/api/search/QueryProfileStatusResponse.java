@@ -30,7 +30,7 @@ public class QueryProfileStatusResponse {
     /**
      * @return The name of the created query profile
      */
-    private final String queryProfile;
+    private final String queryProfileName;
 
     @JsonPOJOBuilder(withPrefix = "set")
     @Setter
@@ -40,12 +40,10 @@ public class QueryProfileStatusResponse {
         private String message;
 
         @JsonProperty("query_profile")
-        private String queryProfile;
+        private String queryProfileName;
 
         public QueryProfileStatusResponse build() {
-            return new QueryProfileStatusResponse(message, queryProfile);
+            return new QueryProfileStatusResponse(message, queryProfileName);
         }
-
     }
-
 }

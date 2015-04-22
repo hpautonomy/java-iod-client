@@ -61,9 +61,8 @@ public class CreateDeleteQueryProfileServiceSuiteChild extends AbstractIodClient
         final QueryProfileStatusResponse deleteResponse = deleteQueryProfileService.deleteQueryProfile(endpoint.getApiKey(), profileName);
 
         assertThat(createResponse.getMessage(), is(notNullValue()));
-        assertThat(createResponse.getQueryProfile(), is(profileName));
+        assertThat(createResponse.getQueryProfileName(), is(profileName));
         assertThat(deleteResponse.getMessage(), is(notNullValue()));
-        assertThat(deleteResponse.getQueryProfile(), is(profileName));
+        assertThat(deleteResponse.getQueryProfileName(), is(profileName));
     }
-
 }
