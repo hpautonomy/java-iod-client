@@ -20,7 +20,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import java.util.ArrayList;
 
 @RunWith(Parameterized.class)
-public class CreateDeleteQueryProfileServiceITCase extends AbstractIodClientIntegrationTest {
+public class CreateDeleteQueryProfileServiceSuiteChild extends AbstractIodClientIntegrationTest {
 
     private CreateQueryProfileService createQueryProfileService;
     private DeleteQueryProfileService deleteQueryProfileService;
@@ -33,7 +33,7 @@ public class CreateDeleteQueryProfileServiceITCase extends AbstractIodClientInte
         deleteQueryProfileService = getRestAdapter().create(DeleteQueryProfileService.class);
     }
 
-    public CreateDeleteQueryProfileServiceITCase(final Endpoint endpoint) {
+    public CreateDeleteQueryProfileServiceSuiteChild(final Endpoint endpoint) {
         super(endpoint);
     }
 
