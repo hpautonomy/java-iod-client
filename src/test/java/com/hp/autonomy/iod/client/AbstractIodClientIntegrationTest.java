@@ -27,10 +27,6 @@ public abstract class AbstractIodClientIntegrationTest {
         );
     }
 
-    /**
-     * Make sure you override this and call super(endpoint);
-     * @param endpoint
-     */
     public AbstractIodClientIntegrationTest(final Endpoint endpoint) {
         this.endpoint = endpoint;
     }
