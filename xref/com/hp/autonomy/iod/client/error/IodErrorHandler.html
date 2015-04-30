@@ -30,7 +30,7 @@
 <a class="jxr_linenumber" name="20" href="#20">20</a>      <strong class="jxr_keyword">public</strong> Throwable handleError(<strong class="jxr_keyword">final</strong> RetrofitError cause) {
 <a class="jxr_linenumber" name="21" href="#21">21</a>          <strong class="jxr_keyword">final</strong> RetrofitError.Kind kind = cause.getKind();
 <a class="jxr_linenumber" name="22" href="#22">22</a>  
-<a class="jxr_linenumber" name="23" href="#23">23</a>          <strong class="jxr_keyword">if</strong>(kind == RetrofitError.Kind.HTTP) {
+<a class="jxr_linenumber" name="23" href="#23">23</a>          <strong class="jxr_keyword">if</strong> (kind == RetrofitError.Kind.HTTP) {
 <a class="jxr_linenumber" name="24" href="#24">24</a>              <em class="jxr_comment">// IOD returned an unsuccessful status code, parse the JSON response and throw something better</em>
 <a class="jxr_linenumber" name="25" href="#25">25</a>              <a href="../../../../../../com/hp/autonomy/iod/client/error/IodError.html">IodError</a> iodError = (IodError) cause.getBodyAs(IodError.<strong class="jxr_keyword">class</strong>);
 <a class="jxr_linenumber" name="26" href="#26">26</a>  
@@ -41,7 +41,7 @@
 <a class="jxr_linenumber" name="31" href="#31">31</a>              <em class="jxr_comment">// if has actions, pull the error out of the action as it will be more useful</em>
 <a class="jxr_linenumber" name="32" href="#32">32</a>              <strong class="jxr_keyword">final</strong> List&lt;Action&lt;?&gt;&gt; actions = iodError.getActions();
 <a class="jxr_linenumber" name="33" href="#33">33</a>  
-<a class="jxr_linenumber" name="34" href="#34">34</a>              <strong class="jxr_keyword">if</strong>(message != <strong class="jxr_keyword">null</strong> &amp;&amp; iodError.getErrorCode() == <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="34" href="#34">34</a>              <strong class="jxr_keyword">if</strong> (message != <strong class="jxr_keyword">null</strong> &amp;&amp; iodError.getErrorCode() == <strong class="jxr_keyword">null</strong>) {
 <a class="jxr_linenumber" name="35" href="#35">35</a>                  <em class="jxr_comment">// IOD has given us an API key error</em>
 <a class="jxr_linenumber" name="36" href="#36">36</a>                  <strong class="jxr_keyword">final</strong> Map&lt;String, Object&gt; detail = (Map&lt;String, Object&gt;) iodError.getDetail();
 <a class="jxr_linenumber" name="37" href="#37">37</a>                  <strong class="jxr_keyword">final</strong> <a href="../../../../../../com/hp/autonomy/iod/client/error/IodErrorCode.html">IodErrorCode</a> errorCode = IodErrorCode.fromCode((Integer) detail.get(<span class="jxr_string">"error"</span>));
@@ -51,14 +51,14 @@
 <a class="jxr_linenumber" name="41" href="#41">41</a>                          .setReason(message)
 <a class="jxr_linenumber" name="42" href="#42">42</a>                          .build();
 <a class="jxr_linenumber" name="43" href="#43">43</a>              }
-<a class="jxr_linenumber" name="44" href="#44">44</a>              <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong>(actions != <strong class="jxr_keyword">null</strong> &amp;&amp; !actions.isEmpty()) {
+<a class="jxr_linenumber" name="44" href="#44">44</a>              <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (actions != <strong class="jxr_keyword">null</strong> &amp;&amp; !actions.isEmpty()) {
 <a class="jxr_linenumber" name="45" href="#45">45</a>                  <em class="jxr_comment">// IOD has given us job style output</em>
 <a class="jxr_linenumber" name="46" href="#46">46</a>                  iodError = actions.get(0).getErrors().get(0);
 <a class="jxr_linenumber" name="47" href="#47">47</a>              }
 <a class="jxr_linenumber" name="48" href="#48">48</a>  
 <a class="jxr_linenumber" name="49" href="#49">49</a>              <em class="jxr_comment">// may be null if no response body</em>
 <a class="jxr_linenumber" name="50" href="#50">50</a>              <strong class="jxr_keyword">if</strong> (iodError != <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="51" href="#51">51</a>                  <strong class="jxr_keyword">if</strong>(iodError.getErrorCode() == IodErrorCode.UNKNOWN_ERROR_CODE) {
+<a class="jxr_linenumber" name="51" href="#51">51</a>                  <strong class="jxr_keyword">if</strong> (iodError.getErrorCode() == IodErrorCode.UNKNOWN_ERROR_CODE) {
 <a class="jxr_linenumber" name="52" href="#52">52</a>                      <em class="jxr_comment">// a code we've not seen before has been returned, log it</em>
 <a class="jxr_linenumber" name="53" href="#53">53</a>                      log.error(<span class="jxr_string">"UNKNOWN ERROR CODE {}"</span>, iodError.getErrorCode());
 <a class="jxr_linenumber" name="54" href="#54">54</a>                  }
