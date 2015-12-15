@@ -42,7 +42,6 @@ public class ListIndexesServiceITCase extends AbstractIodClientIntegrationTest {
     @Test
     public void testListIndexes() throws IodErrorException {
         final Map<String, Object> params = new ListIndexesRequestBuilder()
-                .setIndexFlavors(EnumSet.of(IndexFlavor.explorer))
                 .setIndexTypes(EnumSet.of(IndexType.content))
                 .build();
 

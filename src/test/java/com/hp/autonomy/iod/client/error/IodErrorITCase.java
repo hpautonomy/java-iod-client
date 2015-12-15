@@ -55,8 +55,8 @@ public class IodErrorITCase extends AbstractIodClientIntegrationTest {
             queryTextIndexService.queryTextIndexWithText(endpoint.getApiKey(), "OR", null);
             fail("IodErrorException not thrown");
         } catch (final IodErrorException e) {
-            assertThat(e.getErrorCode(), is(IodErrorCode.BACKEND_REQUEST_FAILED));
-            assertThat(e.getMessage(), is("Backend request failed"));
+            assertThat(e.getErrorCode(), is(IodErrorCode.NO_IGNORE_SPECIALS));
+            assertThat(e.getMessage(), is("Invalid query text"));
         }
     }
 
@@ -66,8 +66,8 @@ public class IodErrorITCase extends AbstractIodClientIntegrationTest {
             queryTextIndexService.queryTextIndexWithText("*", null);
             fail("IodErrorException not thrown");
         } catch (final IodErrorException e) {
-            assertThat(e.getErrorCode(), is(IodErrorCode.API_KEY_REQUIRED));
-            assertThat(e.getMessage(), is("API key required"));
+            assertThat(e.getErrorCode(), is(IodErrorCode.AUTHENTICATION_FAILED));
+            assertThat(e.getMessage(), is("Authentication failed"));
         }
     }
 
@@ -80,8 +80,8 @@ public class IodErrorITCase extends AbstractIodClientIntegrationTest {
             queryTextIndexService.queryTextIndexWithText(endpoint.getApiKey(), "*", params);
             fail("IodErrorException not thrown");
         } catch (final IodErrorException e) {
-            assertThat(e.getErrorCode(), is(IodErrorCode.INVALID_API_KEY));
-            assertThat(e.getMessage(), is("Invalid API key"));
+            assertThat(e.getErrorCode(), is(IodErrorCode.AUTHENTICATION_FAILED));
+            assertThat(e.getMessage(), is("Authentication failed"));
         }
     }
 

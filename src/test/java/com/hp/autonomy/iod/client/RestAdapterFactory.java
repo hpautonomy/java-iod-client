@@ -12,7 +12,6 @@ import org.apache.http.HttpHost;
 import org.apache.http.impl.client.HttpClientBuilder;
 import retrofit.RestAdapter;
 import retrofit.client.ApacheClient;
-import retrofit.converter.JacksonConverter;
 
 public class RestAdapterFactory {
 
@@ -33,7 +32,7 @@ public class RestAdapterFactory {
         final RestAdapter.Builder restAdapterBuilder = new RestAdapter.Builder()
                 .setEndpoint(endpoint.getUrl())
                 .setClient(new ApacheClient(builder.build()))
-                .setConverter(new IodConverter(new JacksonConverter()))
+                .setConverter(new IodConverter())
                 .setErrorHandler(new IodErrorHandler());
 
 

@@ -5,8 +5,11 @@
 
 package com.hp.autonomy.iod.client.converter;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import retrofit.converter.ConversionException;
 import retrofit.converter.Converter;
+import retrofit.converter.JacksonConverter;
 import retrofit.mime.TypedInput;
 import retrofit.mime.TypedOutput;
 import retrofit.mime.TypedString;
@@ -23,10 +26,21 @@ public class IodConverter implements Converter {
 
     /**
      * Creates a new IodConverter
-     * @param converter Delegate converter which will do most of the work
      */
-    public IodConverter(final Converter converter) {
-        this.converter = converter;
+    public IodConverter() {
+        this(new ObjectMapper());
+    }
+
+    /**
+     * Creates a new IodConverter
+     *
+     * @param objectMapper Jackson ObjectMapper for handling Json
+     */
+    public IodConverter(final ObjectMapper objectMapper) {
+        final ObjectMapper objectMapperCopy = objectMapper.copy();
+        // HPE Haven OnDemand does not consider adding new properties to be a breaking change, so ignore any unknown properties
+        objectMapperCopy.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+        converter = new JacksonConverter(objectMapperCopy);
     }
 
     /**
@@ -45,8 +59,7 @@ public class IodConverter implements Converter {
     public TypedOutput toBody(final Object object) {
         if (object.getClass().isAnnotationPresent(DoNotConvert.class)) {
             return new TypedString(object.toString());
-        }
-        else {
+        } else {
             return converter.toBody(object);
         }
     }
