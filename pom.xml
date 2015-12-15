@@ -62,6 +62,12 @@
             <organization>Hewlett Packard Enterprise</organization>
             <organizationUrl>http://www.hpe.com</organizationUrl>
         </developer>
+        <developer>
+            <name>Ivo Miller</name>
+            <email>ivo.miller@hpe.com</email>
+            <organization>Hewlett Packard Enterprise</organization>
+            <organizationUrl>http://www.hpe.com</organizationUrl>
+        </developer>
     </developers>
 
     <properties>
