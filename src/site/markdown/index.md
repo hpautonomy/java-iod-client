@@ -19,18 +19,19 @@ java-iod-client is available from the central Maven repository.
     <dependency>
         <groupId>com.hp.autonomy.iod</groupId>
         <artifactId>java-iod-client</artifactId>
-        <version>0.7.0</version>
+        <version>0.8.0</version>
     </dependency>
 
 java-iod-client uses [Retrofit](http://square.github.io/retrofit/) as the basis of its HTTP implementation. This
-requires the use of a RestAdapter to use the services. We have used [Jackson](https://github.com/FasterXML/jackson) for
-JSON transformation, so you will need to use the Jackson Converter. To send multipart requests to IDOL OnDemand
-correctly, you will need to wrap this in an IodConverter. An error handler is supplied for parsing error responses from
+requires the use of a RestAdapter to use the services. To send multipart requests to IDOL OnDemand correctly, you will need to use an IodConverter.
+We have used [Jackson](https://github.com/FasterXML/jackson) for
+JSON transformation, so you will need to pass a Jackson ObjectMapper to the IodConverter constructor (or use the default constructor which creates a default ObjectMapper).
+An error handler is supplied for parsing error responses from
 IDOL OnDemand.
 
     final RestAdapter restAdapter = new RestAdapter.Builder()
         .setEndpoint("https://api.idolondemand.com/1")
-        .setConverter(new IodConverter(new JacksonConverter()))
+        .setConverter(new IodConverter())
         .setErrorHandler(new IodErrorHandler())
         .build();
 
@@ -94,7 +95,7 @@ in conjunction with a request interceptor.
     // set up a RestAdapter using a request interceptor
     final RestAdapter restAdapter = new RestAdapter.Builder()
         .setEndpoint("https://api.idolondemand.com/1")
-        .setConverter(new IodConverter(new JacksonConverter()))
+        .setConverter(new IodConverter())
         .setErrorHandler(new IodErrorHandler())
         .setRequestInterceptor(new ApiKeyRequestInterceptor(apiKey))
         .build();
@@ -116,7 +117,7 @@ attempt to poll for job status with the given API key
     // set up a RestAdapter using a request interceptor
     final RestAdapter restAdapter = new RestAdapter.Builder()
         .setEndpoint("https://api.idolondemand.com/1")
-        .setConverter(new IodConverter(new JacksonConverter()))
+        .setConverter(new IodConverter())
         .setErrorHandler(new IodErrorHandler())
         .setRequestInterceptor(new ApiKeyRequestInterceptor(apiKey))
         .build();
