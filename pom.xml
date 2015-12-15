@@ -34,33 +34,33 @@
     <developers>
         <developer>
             <name>Alex Scown</name>
-            <email>alex.scown@hp.com</email>
-            <organization>HP</organization>
-            <organizationUrl>http://www.hp.com</organizationUrl>
+            <email>alex.scown@hpe.com</email>
+            <organization>Hewlett Packard Enterprise</organization>
+            <organizationUrl>http://www.hpe.com</organizationUrl>
         </developer>
         <developer>
             <name>Daniel Grayling</name>
-            <email>daniel.grayling@hp.com</email>
-            <organization>HP</organization>
-            <organizationUrl>http://www.hp.com</organizationUrl>
+            <email>daniel.grayling@hpe.com</email>
+            <organization>Hewlett Packard Enterprise</organization>
+            <organizationUrl>http://www.hpe.com</organizationUrl>
         </developer>
         <developer>
             <name>ivanoaly</name>
-            <email>alyona.ivanova@hp.com</email>
-            <organization>HP</organization>
-            <organizationUrl>http://www.hp.com</organizationUrl>
+            <email>alyona.ivanova@hpe.com</email>
+            <organization>Hewlett Packard Enterprise</organization>
+            <organizationUrl>http://www.hpe.com</organizationUrl>
         </developer>
         <developer>
             <name>Jonathan Soul</name>
-            <email>jonathan.soul@hp.com</email>
-            <organization>HP</organization>
-            <organizationUrl>http://www.hp.com</organizationUrl>
+            <email>jonathan.soul@hpe.com</email>
+            <organization>Hewlett Packard Enterprise</organization>
+            <organizationUrl>http://www.hpe.com</organizationUrl>
         </developer>
         <developer>
             <name>Brian Beckett</name>
-            <email>brian.beckett@hp.com</email>
-            <organization>HP</organization>
-            <organizationUrl>http://www.hp.com</organizationUrl>
+            <email>brian.beckett@hpe.com</email>
+            <organization>Hewlett Packard Enterprise</organization>
+            <organizationUrl>http://www.hpe.com</organizationUrl>
         </developer>
     </developers>
 
