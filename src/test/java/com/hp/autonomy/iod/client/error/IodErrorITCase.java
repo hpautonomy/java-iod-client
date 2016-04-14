@@ -71,18 +71,4 @@ public class IodErrorITCase extends AbstractIodClientIntegrationTest {
         }
     }
 
-    @Test
-    public void testIodReturnsApiKeyErrorWithDuplicateKeys() {
-        final Map<String, Object> params = new HashMap<>();
-        params.put("apiKey", endpoint.getApiKey());
-
-        try {
-            queryTextIndexService.queryTextIndexWithText(endpoint.getApiKey(), "*", params);
-            fail("IodErrorException not thrown");
-        } catch (final IodErrorException e) {
-            assertThat(e.getErrorCode(), is(IodErrorCode.AUTHENTICATION_FAILED));
-            assertThat(e.getMessage(), is("Authentication failed"));
-        }
-    }
-
 }
