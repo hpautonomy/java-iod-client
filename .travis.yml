@@ -22,4 +22,4 @@ env:
   # DEV_API_KEY
   - secure: BTkzfC47geKHM/e0xSTPVzmR/Zgjke288lrPVHyyv3hb61Vilzp0WGA8kDlc47kdUyPBzVfvVCRa/zr0ba2VaTnhn8jn8ApPz6cpngWJumnPjky5vfRV/XYx+8QtiVj8ED6csuACa/LPbbzLHnkAMLUe42yRUnL3pJbfrJf3uuM=
   # GITHUB_TOKEN
-  - secure: dxKqiSzQ2+HkhZZYRJvhFGVRLWjBZ4/bFHTAqg9bNyEfIPw1xkJVC/ujVL0VhNa9d8pP8rV9+lduodPL+c8jc5GntUqlxBENr9hgMSl0A/sCkxR8TaBPupig3y9fKdIuA7IiYn6VFJ9UATC5t/flXeRyIgZbJHsike6RzKAld3w=
+  - secure: jciupo3CbAcfu4Ml8ULHQtD2ih1c74e1eA8iAi9wRl0CQGR3a6pgB2rhmrRore5QOUoPOLc5kjRpamPG7G7u7EsqRKNfDRZ4RpCPkExMsLQcgi1Ayh4uxPF2t0/7i+LaRgjsG6cOjsFnHQWTC6UzXYaemCUEWKB65Uki8l7ky9w=
