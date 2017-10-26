@@ -17,9 +17,9 @@ import java.util.Set;
 /**
  * Map implementation which supports multiple values for keys. This allow converting items in a list to multiple HTTP
  * query parameters/parts. Adding a key pairing multiple times has no effect beyond the first.
- * <p/>
+ * <p></p>
  * Somewhat unusually, get is NOT supported on this map, as it makes little semantic sense.
- * <p/>
+ * <p></p>
  * This map does not support null keys and values
  * @param <K> The type of the map's keys
  * @param <V> The type of the map's values

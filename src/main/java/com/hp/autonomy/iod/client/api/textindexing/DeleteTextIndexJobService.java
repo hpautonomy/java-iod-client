@@ -18,7 +18,7 @@ import java.util.concurrent.ScheduledExecutorService;
 
 /**
  * Service for managing jobs ids from the DeleteTextIndex API.
- * <p/>
+ * <p></p>
  * The destroy method should be called when the service is no longer needed.
  */
 @Slf4j
