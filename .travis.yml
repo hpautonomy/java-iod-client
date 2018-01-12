@@ -21,5 +21,3 @@ env:
   - secure: XD7/u+zC3hO4Nj9fMjg6YrIBFxcqrbkOGpK96NKy2op9Pkc3R/OaDQAI33mD27yMkdNgspL4Cu8xmEy8496yxWkPPLMfeEJJoC64wRkALN9nbwhMssQh/f1fe7oL71bsdwt0Da9k+Wlsokx6thXmYOtdWS5SKd+ISC7PzhiEIKY=
   # DEV_API_KEY
   - secure: BTkzfC47geKHM/e0xSTPVzmR/Zgjke288lrPVHyyv3hb61Vilzp0WGA8kDlc47kdUyPBzVfvVCRa/zr0ba2VaTnhn8jn8ApPz6cpngWJumnPjky5vfRV/XYx+8QtiVj8ED6csuACa/LPbbzLHnkAMLUe42yRUnL3pJbfrJf3uuM=
-  # GITHUB_TOKEN
-  - secure: jciupo3CbAcfu4Ml8ULHQtD2ih1c74e1eA8iAi9wRl0CQGR3a6pgB2rhmrRore5QOUoPOLc5kjRpamPG7G7u7EsqRKNfDRZ4RpCPkExMsLQcgi1Ayh4uxPF2t0/7i+LaRgjsG6cOjsFnHQWTC6UzXYaemCUEWKB65Uki8l7ky9w=
